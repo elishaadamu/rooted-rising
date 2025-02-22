@@ -1,0 +1,85 @@
+@media (max-width: 768px) {
+  .mx-10 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .mx-15 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .p-8 {
+    padding: 2rem;
+  }
+  .text-4xl {
+    font-size: 2rem;
+  }
+  .text-3xl {
+    font-size: 1.75rem;
+  }
+  .text-xl {
+    font-size: 1rem;
+  }
+  .gallery > img {
+    width: 100% !important; /* control the size */
+    height: 100% !important;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+.top {
+  position: sticky;
+  bottom: 20px;
+  margin-right: 10px;
+  place-self: end;
+  width: 50px;
+  aspect-ratio: 1;
+  background: #57595c;
+  border-radius: 10px;
+  font-size: 0;
+  cursor: pointer;
+}
+.top:before {
+  content: "";
+  position: absolute;
+  inset: 30%;
+  transform: translateY(20%) rotate(-45deg);
+  border-top: 5px solid #fff;
+  border-right: 5px solid #fff;
+}
+
+.gallery {
+  --g: 5px; /* the gap */
+
+  display: grid;
+  clip-path: inset(1px); /* to avoid visual glitchs */
+}
+.gallery > img {
+  --_p: calc(-1 * var(--g));
+  grid-area: 1/1;
+  width: 90%; /* control the size */
+  height: 100%;
+  aspect-ratio: 1;
+  cursor: pointer;
+  transition: 0.4s 0.1s;
+  border-radius: 16px;
+}
+.gallery > img:first-child {
+  clip-path: polygon(0 0, calc(100% + var(--_p)) 0, 0 calc(100% + var(--_p)));
+}
+.gallery > img:last-child {
+  clip-path: polygon(
+    100% 100%,
+    100% calc(0% - var(--_p)),
+    calc(0% - var(--_p)) 100%
+  );
+}
+.gallery:hover > img:last-child,
+.gallery:hover > img:first-child:hover {
+  --_p: calc(60% - var(--g));
+}
+.gallery:hover > img:first-child,
+.gallery:hover > img:first-child:hover + img {
+  --_p: calc(-60% - var(--g));
+}

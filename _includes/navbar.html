@@ -1,0 +1,114 @@
+<!-- Navigation Bar -->
+<nav
+  class="flex justify-between items-center max-w-7xl mx-auto px-6 py-4 shadow-md bg-white border-t-4 border-purple-500 relative"
+>
+  <!-- Logo Section -->
+  <div class="">
+    <a href="/" class="flex items-center space-x-1">
+      <img
+        src="{{site.logo}}"
+        alt="Rooted Rising Initiative"
+        class="h-13 w-13 rounded-full"
+      />
+      <span class="text-md font-bold">
+        Rooted Rising <br />
+        <span class="text-orange-400">Initiative</span>
+      </span>
+    </a>
+  </div>
+
+  <!-- Hamburger Icon -->
+  <button
+    id="menu-toggle"
+    class="block md:hidden text-black focus:outline-none"
+  >
+    <svg
+      class="w-6 h-6"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M4 6h16M4 12h16m-7 6h7"
+      ></path>
+    </svg>
+  </button>
+
+  <!-- Navigation Menu -->
+  <div
+    id="menu"
+    class="hidden md:flex z-20 flex-col md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-6 text-sm font-semibold text-black absolute left-0 top-full w-full bg-white shadow-md md:relative md:top-0 md:w-auto md:shadow-none transition-all duration-300 ease-in-out opacity-0 md:opacity-100 transform md:translate-y-0 -translate-y-2"
+  >
+    <ul
+      class="flex flex-col md:flex-row md:space-x-6 space-y-4 md:space-y-0 p-4 md:p-0"
+    >
+      <li class="hover:bg-gray-200 p-2 rounded">
+        <a href="/" class="{% if page.url == '/' %}text-orange-500{% endif %}"
+          >HOME</a
+        >
+      </li>
+      <li class="hover:bg-gray-200 p-2 rounded">
+        <a
+          href="/voice-of-the-frontline/"
+          class="{% if page.url == '/voice-of-the-frontline/' %}text-orange-500{% endif %}"
+          >VOICE OF THE FRONTLINE</a
+        >
+      </li>
+      <li class="hover:bg-gray-200 p-2 rounded">
+        <a
+          href="/phamplets/"
+          class="{% if page.url == '/phamplets/' %}text-orange-500{% endif %}"
+          >PHAMPLETS</a
+        >
+      </li>
+      <li class="hover:bg-gray-200 p-2 rounded">
+        <a
+          href="/artvocacy/"
+          class="{% if page.url == '/artvocacy/' %}text-orange-500{% endif %}"
+          >ARTVOCACY</a
+        >
+      </li>
+      <li class="hover:bg-gray-200 p-2 rounded">
+        <a
+          href="/blogs/"
+          class="{% if page.url == '/blogs/' %}text-orange-500{% endif %}"
+          >BLOGS</a
+        >
+      </li>
+      <li class="hover:bg-gray-200 p-2 rounded">
+        <a
+          href="/about-us/"
+          class="{% if page.url == '/about-us/' %}text-orange-500{% endif %}"
+          >ABOUT US</a
+        >
+      </li>
+      <li>
+        <!-- Volunteer Button -->
+        <a
+          href="https://forms.gle/mkGvsk2jL9BqGSdX8"
+          class="md:block bg-orange-500 hover:bg-orange-400 text-white text-sm px-4 py-2 rounded-lg font-bold transition-all duration-300 ease-in-out opacity-0 md:opacity-100 transform scale-90 md:scale-100"
+        >
+          VOLUNTEER <i class="fas fa-external-link-alt"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- JavaScript for Menu Toggle -->
+<script>
+  document.getElementById("menu-toggle").addEventListener("click", function () {
+    let menu = document.getElementById("menu");
+
+    // Toggle classes
+    menu.classList.toggle("hidden");
+    menu.classList.toggle("opacity-0");
+    menu.classList.toggle("-translate-y-2");
+    menu.classList.toggle("opacity-100");
+    menu.classList.toggle("translate-y-0");
+  });
+</script>

@@ -1,0 +1,16 @@
+social_links:
+  - name: "Facebook"
+    url: "https://facebook.com/rootedrisinginitiative"
+    icon: "fab fa-facebook-f"
+
+  - name: "Twitter"
+    url: "https://twitter.com/rootedrising"
+    icon: "fab fa-twitter"
+
+  - name: "Instagram"
+    url: "https://instagram.com/rootedrisinginitiative"
+    icon: "fab fa-instagram"
+
+  - name: "LinkedIn"
+    url: "https://www.linkedin.com/company/rooted-rising-initiative/"
+    icon: "fab fa-linkedin-in"

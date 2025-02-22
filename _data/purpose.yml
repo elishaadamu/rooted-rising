@@ -1,0 +1,12 @@
+sections:
+  - title: "Gender"
+    image: "/src/images/post-1.png"
+    description: "Through storytelling, videos and community engagement, we challenge existing structures of gender disparities, advocate against Gender based violence, and gender parity."
+
+  - title: "Environment"
+    image: "/src/images/post-2.png"
+    description: "We champion environmental campaigns, create awareness and amplify the voices of frontline communities through podcast, media, and community engagement."
+
+  - title: "Society"
+    image: "/src/images/post-3.png"
+    description: "We believe in a society where culture, religion, family, and politics would be a driving force for change."
