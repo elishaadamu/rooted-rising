@@ -22,3 +22,14 @@ window.onscroll = function () {
 backToTopButton.addEventListener("click", function () {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
+
+document.getElementById("menu-toggle").addEventListener("click", function () {
+  let menu = document.getElementById("menu");
+
+  // Toggle classes
+  menu.classList.toggle("hidden");
+  menu.classList.toggle("opacity-0");
+  menu.classList.toggle("-translate-y-2");
+  menu.classList.toggle("opacity-100");
+  menu.classList.toggle("translate-y-0");
+});
