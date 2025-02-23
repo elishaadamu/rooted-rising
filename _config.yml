@@ -21,8 +21,8 @@
 title: Rooted and Rising
 logo: /src/images/logo.png
 email: your-email@example.com
-url: https://rootedrising.org.ng
-baseurl: "/rooted-rising"
+url: ""
+baseurl: "rooted-rising"
 description: >- # this means to ignore newlines until "baseurl:"
   The Rooted Rising Initiative seeks to address the environmental
   and socio-economic challenges faced in the world. The initiative 
