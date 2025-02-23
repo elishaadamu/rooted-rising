@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+<style>
+  {% include page_style.css %}
+</style>
+<!-- 
+		Credits
+
+		Google Web Fonts: Roboto, Oswald
+		Images: https://unsplash.com/ 
+	-->
+<main>
+  <h1>Blog Post List</h1>
+
+  <div class="post-list post-list_grid">
+    <!-- Post 1 -->
+    {% for post in site.posts %}
+    <div class="post-list__post post shadow-md hover:shadow-lg gap-5">
+      <figure class="post__preview-img">
+        <a href="{{post.url}}"
+          ><img src="{{post.image}}" alt="{{post.title}}"
+        /></a>
+      </figure>
+
+      <div class="post__header">
+        <time datetime="2019-11-16" class="post__time"
+          >{{post.date | date: "%B %d, %Y"}}</time
+        >
+        <h2><a href="{{post.url}}">{{post.title}}</a></h2>
+        <p>{{post.content | truncatewords: 20 }}</p>
+      </div>
+
+      <div class="post__meta">
+        <a href="#">{{post.category}}</a>
+      </div>
+    </div>
+    <hr class="block mt-8 md:hidden" />
+    {% endfor %}
+  </div>
+  <!-- / .post-list -->
+</main>

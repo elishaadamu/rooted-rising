@@ -1,0 +1,9 @@
+---
+layout: post
+title: "Our Society"
+image: "/src/images/post-3.png"
+date: 2025-02-21 00:00:00 +0000
+categories: Society
+---
+
+We believe in a society where culture, religion, family, and politics would be a driving force for change.

@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+<div class="mx-16">
+  <h2 class="text-4xl mt-10">{{ page.title }}</h2>
+  <br />
+  <p><strong>Date:</strong> {{ page.date | date: "%Y-%m-%d" }}</p>
+
+  <br />
+  <p><strong>Categories:</strong> {{ page.categories | join: ", " }}</p>
+  <hr class="my-5" />
+  <div class="">{{ page.content }}</div>
+</div>
